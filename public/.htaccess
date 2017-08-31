@@ -3,7 +3,11 @@
         Options -MultiViews
     </IfModule>
 
-    RewriteEngine On
+   RewriteEngine on
+   RewriteCond %{HTTP_HOST} ^dt-inventory.herokuapp.com$ [NC,OR]
+   RewriteCond %{HTTP_HOST} ^dt-inventory.herokuapp.com$
+   RewriteCond %{REQUEST_URI} !public/
+   RewriteRule (.*) /public/$1 [L]
 
     # Uncomment these two lines to force SSL redirect
      RewriteCond %{HTTPS} off

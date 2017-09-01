@@ -1,4 +1,9 @@
 <?php
+
+if (App::environment('production')) {
+        URL::forceSchema('https');
+}
+
 use App\Models\CheckoutRequest;
 use App\Models\Location;
 use App\Models\Statuslabel;

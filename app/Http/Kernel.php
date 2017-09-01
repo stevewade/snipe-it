@@ -17,7 +17,6 @@ class Kernel extends HttpKernel
         \MisterPhilip\MaintenanceMode\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Session\Middleware\StartSession::class,
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        \App\Http\Middleware\ForceHttps::class,
         \App\Http\Middleware\FrameGuard::class,
         \App\Http\Middleware\XssProtectHeader::class,
         \App\Http\Middleware\NosniffGuard::class,

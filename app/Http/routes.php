@@ -4,12 +4,6 @@ if (App::environment('production')) {
         URL::forceSchema('https');
 }
 
-if (App::url('http://dt-inventory.herokuapp.com/*')) {
-        URL::forceSchema('https');
-}
-
-
-
 use App\Models\CheckoutRequest;
 use App\Models\Location;
 use App\Models\Statuslabel;
